@@ -1,4 +1,4 @@
-# PanShare Lite · 复古游戏资源分享
+# PanShare · 复古游戏资源分享
 
 一个**纯静态、零后端**的复古游戏资源导航站。汇集 **53 个**复古游戏资源包，总计约 **5.05 TB**、**10 万+** 个文件，全部托管在夸克网盘，免费分享、一键转存。
 
@@ -90,4 +90,4 @@ python -m http.server 8000
 
 ## License
 
-[MIT](./LICENSE) © PanShare Lite
+[MIT](./LICENSE) © PanShare
