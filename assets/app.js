@@ -13,6 +13,7 @@
   const coverEmoji = { '掌机游戏': '🎮', '街机·主机': '🕹️', '开源掌机': '📟', '改版HACK': '⚡', '游戏周边': '📚' };
   const totalGB = DATA.totalSizeGB;
   const sizeFmt = GB => GB >= 1024 ? (GB / 1024).toFixed(2) + ' TB' : GB.toFixed(1) + ' GB';
+  const coverSrc = no => 'covers/' + String(no).padStart(2, '0') + '.jpg';
 
   // 总览
   document.getElementById('statTotal').textContent = DATA.total;
@@ -74,8 +75,9 @@
     cards.innerHTML = list.map(x => `
       <article class="card-r">
         <div class="cover" aria-hidden="true">
+          <span class="cover-emoji" style="position:relative">${coverEmoji[x.cat] || '🎮'}</span>
+          <img class="cover-img" src="${coverSrc(x.no)}" alt="" loading="lazy" onerror="this.remove()">
           <span class="cat-badge">${x.cat}</span>
-          <span style="position:relative">${coverEmoji[x.cat] || '🎮'}</span>
         </div>
         <div class="body-r">
           <h3 title="${escapeHtml(x.name)}">#${x.no} ${escapeHtml(x.name)}</h3>
